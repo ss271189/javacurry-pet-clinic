@@ -8,7 +8,7 @@ Explore
  
 @ss271189 
 springframeworkguru
-/
+
 sfg-pet-clinic
 24
 1591.4k
@@ -101,7 +101,8 @@ local.properties
 ######################
 /log/
 /target/
-
+/pet-clinic-web/target/
+/pet-clinic-data/target/
 ######################
 # Gradle
 ######################

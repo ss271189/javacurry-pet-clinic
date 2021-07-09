@@ -2,11 +2,12 @@ package jc.springframework.service.map;
 
 import jc.springframework.model.Pet;
 import jc.springframework.service.CrudService;
+import jc.springframework.service.PetService;
 import org.springframework.boot.CommandLineRunner;
 
 import java.util.Set;
 
-public class PerServiceMap extends AbstractMapService<Pet,Long> implements CrudService<Pet,Long> {
+public class PerServiceMap extends AbstractMapService<Pet,Long> implements PetService {
     @Override
     public Pet findById(Long id) {
         return super.findById(id);

@@ -3,9 +3,12 @@ package jc.springframework.service.map;
 import jc.springframework.model.Vet;
 import jc.springframework.service.CrudService;
 import jc.springframework.service.VetService;
+import org.springframework.stereotype.Service;
 
 import java.util.Set;
 
+
+@Service
 public class VetServiceMap  extends AbstractMapService<Vet,Long> implements VetService {
     @Override
     public Vet findById(Long id) {

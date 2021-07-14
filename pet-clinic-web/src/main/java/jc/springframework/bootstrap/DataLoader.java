@@ -5,7 +5,9 @@ import jc.springframework.model.Vet;
 import jc.springframework.service.OwnerService;
 import jc.springframework.service.VetService;
 import org.springframework.boot.CommandLineRunner;
+import org.springframework.stereotype.Component;
 
+@Component
 public class DataLoader implements CommandLineRunner {
 
     private final OwnerService ownerService;

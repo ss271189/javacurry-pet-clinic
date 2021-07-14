@@ -3,9 +3,11 @@ package jc.springframework.service.map;
 import jc.springframework.model.Owner;
 import jc.springframework.service.CrudService;
 import jc.springframework.service.OwnerService;
+import org.springframework.stereotype.Service;
 
 import java.util.Set;
 
+@Service
 public class OwnerServiceMap extends AbstractMapService<Owner,Long> implements OwnerService {
 
     @Override

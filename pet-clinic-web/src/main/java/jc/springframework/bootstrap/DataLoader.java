@@ -5,10 +5,13 @@ import jc.springframework.model.Pet;
 import jc.springframework.model.PetType;
 import jc.springframework.model.Vet;
 import jc.springframework.service.OwnerService;
+import jc.springframework.service.PetService;
 import jc.springframework.service.PetTypeService;
 import jc.springframework.service.VetService;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.stereotype.Component;
+
+import java.time.LocalDate;
 
 @Component
 public class DataLoader implements CommandLineRunner {
@@ -37,6 +40,17 @@ public class DataLoader implements CommandLineRunner {
         //o1.setId(1L);
         o1.setFirstName("Shashank");
         o1.setLastName("Saurabh");
+        o1.setAddress("rN");
+        o1.setCity("Gopalganj");
+        o1.setTelephone("1234567890");
+
+
+        Pet myPet=new Pet();
+        myPet.setName("Sheru");
+        myPet.setBirthDate(LocalDate.now());
+        myPet.setOwner(o1);
+        myPet.setPetType(dogPT);
+        o1.getPets().add(myPet);
 
         ownerService.save(o1);
 
@@ -44,6 +58,13 @@ public class DataLoader implements CommandLineRunner {
         //o2.setId(2L);
         o2.setFirstName("Surbhi");
         o2.setLastName("Rani");
+
+        Pet myCat=new Pet();
+        myCat.setName("Chinna");
+        myCat.setBirthDate(LocalDate.now());
+        myCat.setOwner(o2);
+        myCat.setPetType(catPT);
+        o2.getPets().add(myCat);
 
         ownerService.save(o2);
 

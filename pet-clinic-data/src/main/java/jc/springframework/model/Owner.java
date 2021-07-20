@@ -1,19 +1,20 @@
 package jc.springframework.model;
 
+import java.util.HashSet;
 import java.util.Set;
 
 public class Owner extends Person {
-    private Set<Pet> pet;
+    private Set<Pet> pets= new HashSet<>();
     private String address;
     private String city;
     private String telephone;
 
-    public Set<Pet> getPet() {
-        return pet;
+    public Set<Pet> getPets() {
+        return pets;
     }
 
-    public void setPet(Set<Pet> pet) {
-        this.pet = pet;
+    public void setPets(Set<Pet> pets) {
+        this.pets = pets;
     }
 
     public String getAddress() {
